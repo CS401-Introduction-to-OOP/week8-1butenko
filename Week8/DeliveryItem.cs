@@ -11,5 +11,8 @@ public abstract class DeliveryItem
 
     public abstract double CalculateCost();
 
-    public abstract void PrintInfo();
+    public virtual void PrintInfo()
+    {
+        Console.WriteLine($"Tracking number: {TrackingNumber} | Weight: {Weight}");
+    }
 }
