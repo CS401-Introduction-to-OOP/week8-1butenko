@@ -1,0 +1,15 @@
+public abstract class DeliveryItem
+{
+    public string TrackingNumber { get; }
+    public double Weight { get; protected set; }
+
+    public DeliveryItem(string trackingNumber, double weight)
+    {
+        TrackingNumber = trackingNumber;
+        Weight = weight;
+    }
+
+    public abstract double CalculateCost();
+
+    public abstract void PrintInfo();
+}
